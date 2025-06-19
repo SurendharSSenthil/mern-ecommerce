@@ -34,7 +34,7 @@ res.sendFile(path.resolve(__dirname,'client','build','index.html'));
 
 //MongoDB connection
 const PORT = process.env.PORT || 4000;
-const dbURI = process.env.DB_URI;
+const dbURI = "mongodb+srv://RamVenkat74:balaram%4007112005@merncluster.7lo3ufs.mongodb.net/mernapp";
 
 mongoose
   .connect(dbURI, {

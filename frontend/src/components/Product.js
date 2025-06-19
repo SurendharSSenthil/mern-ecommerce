@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Card,
   Header,
@@ -14,6 +14,10 @@ function Product({ imgUrl, title, price, productId, userId }) {
   const quantity = 1;
   const data = { userId, productId, quantity };
 
+  useEffect(() => {
+    console.log(imgUrl);
+  }, []);
+
   const handleAddToCart = data => {
     dispatch(addToCart(data));
     alert('item added to cart');
@@ -23,7 +27,7 @@ function Product({ imgUrl, title, price, productId, userId }) {
     <Card>
       <Container>
         <Header>
-          <img src={imgUrl} alt="jacket"></img>
+          <img src={imgUrl} alt="jacket" height="200px" width="200px"></img>
         </Header>
         <Footer>
           <h2>{title}</h2>

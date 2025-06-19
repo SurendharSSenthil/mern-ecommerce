@@ -21,7 +21,7 @@ function Home() {
         {items.map(item => (
           <Product
             key={item._id}
-            imgUrl={item.img}
+            imgUrl={item.image}
             title={item.title}
             price={item.price}
             productId={item._id}
